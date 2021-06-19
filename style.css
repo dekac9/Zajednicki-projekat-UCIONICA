@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*NAVBAR*/
+.content {
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 30px;
+}
+#navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    padding: 25px 0px;
+    transition: all 0.3s ease;
+    background-color: blueviolet;
+}
+#navbar.sticky {     /*Ova klasa ce da bude dodata naknadno preko JS*/
+    background-color: black;
+    padding: 10px 0px;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+}
+#navbar .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#navbar .logo a {
+    color: white;  
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+#navbar .menu-list {
+    display: flex; 
+}
+.menu-list li {
+    list-style-type: none;
+}
+.menu-list li a {
+    color: white; 
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.menu-list li a:hover {
+    color: black;
+}
+.icon {
+    display: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.menu-list .cancel-btn {
+    position: absolute;
+    z-index: 100;
+    right: 30px;
+    top: 30px;
+}
+
+/*CONTACT FORM*/
+.razdvajac {
+    height: 200px;
+}
+.form-wrapper {
+    border: 1px solid blueviolet;
+    margin-left: 300px;
+    width: 820px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.form-header {
+    display: flex;
+}
+.login-header-btn, .signup-header-btn {
+    width: 50%;
+    text-align: center;
+    font-size: 2em;
+    padding: 15px 0px;
+    font-weight: bold;
+    background-color: blueviolet;
+}
+.signup-header-btn {
+    background-color: white;
+}
+.login-header-btn:hover, .signup-header-btn:hover {
+    color: black;
+    cursor: pointer;
+}
+.login-signup-wrapper {
+    position: relative;  
+    display: flex;
+}
+.prekrivac {
+    position: absolute;
+    margin-left: 410px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: blueviolet;
+    transition: all 0.6s ease;
+}
+.prekrivac p {
+    margin: 20px;
+    color: white;
+}
+.login-wrapper, .signup-wrapper {
+    width: 400px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-wrapper input {
+    width: 90%;
+    margin: 10px 0px;
+    padding: 10px;
+    border: 2px solid lightgray;
+}
+.login-btn {
+    background-color: blueviolet;
+    margin: 20px 0px;
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    width: 90%;
+    padding: 10px;
+}
+.login-forgot-pass a {
+    text-decoration: none;
+}
+.login-not-a-member a {
+    text-decoration: none;
+}
+
+
+
+/*FOOTER*/
+/* OVO JE DODAO DEJAN */
+  .bg-grey {
+    background: #292929;
+  }
+  .logo-footer {
+    margin-bottom: 40px;
+  }
+  footer {
+    color: grey;   
+  }
+  footer p, a {
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+  }
+  footer h6 {
+    font-family: 'Roboto', sans-serif;
+  /* margin-bottom: 40px; */
+    position: relative;
+  }
+  .btn-footer {
+    color: grey;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 43px;
+    font-size: 12px;
+    padding: 7px 30px;
+    line-height: 47px;
+  }
+  .btn-footer:hover {       
+    text-decoration: none;      
+  }
+  .form-footer input[type="text"] {
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    padding-left: 10px;
+  }
+  .form-footer input ::placeholder {
+    font-size: 10px;
+    padding-left: 10px;
+    font-style: italic;
+  }
+  .form-footer input[type="button"] {
+    text-align: center;
+    border: none;
+    background:#232323;
+    margin-left: -5px;
+    outline: none;
+    border-radius: 12px;
+    padding: 2px 12px;
+  }
+  .social .fa {
+    color: grey;
+    font-size: 22px;
+    padding: 10px 15px;
+    background: #3c3c3c;
+  }
+  footer ul li {
+    list-style: none;
+    display: block;
+  }
+  footer ul  {
+    padding-left: 0;
+  }
+  footer ul  li a{
+    text-decoration: none;
+    color: grey;
+    text-decoration:none;
+  }
+  footer a:hover {
+    text-decoration: none;
+    color: #f5f5f5 !important;
+  }
+  footer .logo-part {
+    border-right: 1px solid grey;
+    height: 100%;
+  }
+  
+
+
+/*RESPONSIVE*/
+@media screen and (max-width: 1230px) {
+    
+}
+@media screen and (max-width: 1100px) {
+    
+}
+@media screen and (max-width: 900px) {
+    
+}
+@media screen and (max-width: 768px) {
+    body.disabled {       /*Ovo ce da bude aktivirano sa JS*/
+        overflow: hidden;
+    }
+    .icon {
+        display: block;
+    }
+    .icon.hide {
+        display: none;  /*Ovo ce da bude aktivirano sa JS*/
+    }
+    #navbar .menu-list {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0px;
+        display: block;
+        padding: 40px 0px;
+        text-align: center;
+        background-color:blueviolet;
+        transition: all 0.3s ease;
+    }
+    #navbar.show .menu-list {    /*Ovo ce da bude kasnije aktivirano*/
+        left: 0%;
+    }
+    #navbar .menu-list li {
+        margin-top: 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    #navbar .menu-list li a {
+        font-size: 23px;
+        padding: 30px 0px;
+        margin-left: -100%;
+        transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #navbar.show .menu-list li a {
+        margin-left: 0px;
+    }
+}
