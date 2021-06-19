@@ -1,152 +1,326 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color-primary: #8a2be2;
+  --color-gray: #444444;
 }
 
 /*NAVBAR*/
 .content {
-    max-width: 1250px;
-    margin: auto;
-    padding: 0 30px;
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
 }
 .navbar-container {
-    position: fixed;
-    width: 100%;
-    z-index: 20;
-    padding: 25px 0px;
-    transition: all 0.3s ease;
-    background-color: blueviolet;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  padding: 25px 0px;
+  transition: all 0.3s ease;
+  background-color: blueviolet;
+  box-shadow: 0 1px 10px 5px rgba(0, 0, 0, 0.26);
 }
-.navbar-container.sticky {     /*Ova klasa ce da bude dodata naknadno preko JS*/
-    background-color: black;
-    padding: 10px 0px;
-    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+.navbar-container.sticky {
+  /*Ova klasa ce da bude dodata naknadno preko JS*/
+  background-color: #0b0b0c;
+  padding: 10px 0px;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 10px 5px rgba(0, 0, 0, 0.26);
 }
 .navbar-container .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .navbar-container .logo a {
-    color: white;  
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
 }
 .navbar-container .menu-list {
-    display: flex; 
+  display: flex;
+  margin-bottom: 0;
 }
 .menu-list li {
-    list-style-type: none;
+  list-style-type: none;
 }
 .menu-list li a {
-    color: white; 
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: 25px;
-    text-decoration: none;
-    transition: all 0.5s ease;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.5s ease;
 }
 .menu-list li a:hover {
-    color: black;
+  color: black;
 }
 .icon {
-    display: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
+  display: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
 }
 .menu-list .cancel-btn {
-    position: absolute;
-    z-index: 100;
-    right: 30px;
-    top: 30px;
+  position: absolute;
+  z-index: 100;
+  right: 30px;
+  top: 30px;
 }
 
+/* MAIN SECTION */
+/* visina nav-bara, da bi main krenuo ispod */
+.separator {
+  height: 95px;
+}
+.section1 {
+  background-color: var(--color-primary);
+}
+
+.img-left-wrapper {
+  position: relative;
+  width: max-content;
+  margin: 2rem 0;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.199);
+}
+.img-left-A {
+  width: 400px;
+}
+.welcome-left {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  color: var(--color-gray);
+}
+.img-paragraf-left {
+  color: white;
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  text-align: center;
+  padding: 1rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.1rem;
+  font-style: italic;
+}
+
+/* DESNA STRANA SECTION 1 */
+
+.border-right {
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  min-width: 200px;
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.199);
+}
+
+.right-top {
+  height: 300px;
+  background-image: url(images/jon-tyson-A-obUh61bKw-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: cover;
+}
+
+/* OVO JE SVE ZA DUGME  */
+
+.button-container-2 {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7vh;
+  overflow: hidden;
+  border: 1px solid #000;
+  font-weight: 300;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.199);
+}
+.button-container-2 button {
+  width: 101%;
+  height: 100%;
+
+  font-weight: 300;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  background: #000;
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+  -webkit-mask-size: 3000% 100%;
+  mask-size: 3000% 100%;
+  border: none;
+  color: blueviolet;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(29) forwards;
+  animation: ani2 0.7s steps(29) forwards;
+}
+.button-container-2 button:hover {
+  -webkit-animation: ani 0.7s steps(29) forwards;
+  animation: ani 0.7s steps(29) forwards;
+}
+
+.mas {
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  width: 101%;
+  font-weight: 300;
+  position: absolute;
+  font-size: 1.3rem;
+  margin-top: 8.5px;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+/* KRAJ DUGME ANIMACIJE */
+
+/* SECTION 2 */
+.section2 {
+  height: 800px;
+  background: url(images/leone-venter-VieM9BdZKFo-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /*CONTACT FORM*/
 .razdvajac {
-    height: 200px;
+  height: 200px;
 }
 .form-wrapper {
-    border: 1px solid blueviolet;
-    margin-left: 300px;
-    width: 820px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+  border: 1px solid blueviolet;
+  margin-left: 300px;
+  width: 820px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 .form-header {
-    display: flex;
+  display: flex;
 }
-.login-header-btn, .signup-header-btn {
-    width: 50%;
-    text-align: center;
-    font-size: 2em;
-    padding: 15px 0px;
-    font-weight: bold;
-    background-color: blueviolet;
+.login-header-btn,
+.signup-header-btn {
+  width: 50%;
+  text-align: center;
+  font-size: 2em;
+  padding: 15px 0px;
+  font-weight: bold;
+  background-color: blueviolet;
 }
 .signup-header-btn {
-    background-color: white;
+  background-color: white;
 }
-.login-header-btn:hover, .signup-header-btn:hover {
-    color: black;
-    cursor: pointer;
+.login-header-btn:hover,
+.signup-header-btn:hover {
+  color: black;
+  cursor: pointer;
 }
 .login-signup-wrapper {
-    position: relative;  
-    display: flex;
+  position: relative;
+  display: flex;
 }
 .prekrivac {
-    z-index: 20;
-    position: absolute;
-    margin-left: 410px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-    background-color: blueviolet;
-    transition: all 0.6s ease;
+  z-index: 20;
+  position: absolute;
+  margin-left: 410px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: blueviolet;
+  transition: all 0.6s ease;
 }
 .prekrivac p {
-    margin: 20px;
-    color: white;
+  margin: 20px;
+  color: white;
 }
-.login-wrapper, .signup-wrapper {
-    width: 400px;
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.login-wrapper,
+.signup-wrapper {
+  width: 400px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-wrapper input {
-    width: 100%;
-    margin: 10px 0px;
-    padding: 10px;
-    border: 2px solid lightgray;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 10px;
+  border: 2px solid lightgray;
 }
-.login-btn, .signup-btn {
-    background-color: blueviolet;
-    margin: 20px 0px;
-    font-size: 1.5em;
-    color: white;
-    text-align: center;
-    width: 90%;
-    padding: 10px;
+.login-btn,
+.signup-btn {
+  background-color: blueviolet;
+  margin: 20px 0px;
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+  width: 90%;
+  padding: 10px;
 }
-.login-btn:hover, .signup-btn:hover {
+.login-btn:hover,
+.signup-btn:hover {
   cursor: pointer;
 }
 .login-forgot-pass a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .login-not-a-member a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .input-div {
   position: relative;
@@ -169,137 +343,133 @@
   display: none;
 }
 
-
-
 /*FOOTER*/
 /* OVO JE DODAO DEJAN */
-  .bg-grey {
-    background: #292929;
-  }
-  .logo-footer {
-    margin-bottom: 40px;
-  }
-  footer {
-    color: grey;   
-  }
-  footer p, footer a {
-    font-size: 12px;
-    font-family: 'Roboto', sans-serif;
-  }
-  footer h6 {
-    font-family: 'Roboto', sans-serif;
+.bg-grey {
+  background: #292929;
+}
+.logo-footer {
+  margin-bottom: 40px;
+}
+footer {
+  color: grey;
+}
+footer p,
+footer a {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+}
+footer h6 {
+  font-family: "Roboto", sans-serif;
   /* margin-bottom: 40px; */
-    position: relative;
-  }
-  .btn-footer {
-    color: grey;
-    text-decoration: none;
-    border: 1px solid;
-    border-radius: 43px;
-    font-size: 12px;
-    padding: 7px 30px;
-    line-height: 47px;
-  }
-  .btn-footer:hover {       
-    text-decoration: none;      
-  }
-  .form-footer input[type="text"] {
-    border: none;
-    border-radius: 12px;
-    outline: none;
-    padding-left: 10px;
-  }
-  .form-footer input ::placeholder {
-    font-size: 10px;
-    padding-left: 10px;
-    font-style: italic;
-  }
-  .form-footer input[type="button"] {
-    text-align: center;
-    border: none;
-    background:#232323;
-    margin-left: -5px;
-    outline: none;
-    border-radius: 12px;
-    padding: 2px 12px;
-  }
-  .social .fa {
-    color: grey;
-    font-size: 22px;
-    padding: 10px 15px;
-    background: #3c3c3c;
-  }
-  footer ul li {
-    list-style: none;
-    display: block;
-  }
-  footer ul  {
-    padding-left: 0;
-  }
-  footer ul  li a{
-    text-decoration: none;
-    color: grey;
-    text-decoration:none;
-  }
-  footer a:hover {
-    text-decoration: none;
-    color: #f5f5f5 !important;
-  }
-  footer .logo-part {
-    border-right: 1px solid grey;
-    height: 100%;
-  }
-  
-
+  position: relative;
+}
+.btn-footer {
+  color: grey;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 43px;
+  font-size: 12px;
+  padding: 7px 30px;
+  line-height: 47px;
+}
+.btn-footer:hover {
+  text-decoration: none;
+}
+.form-footer input[type="text"] {
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  padding-left: 10px;
+}
+.form-footer input ::placeholder {
+  font-size: 10px;
+  padding-left: 10px;
+  font-style: italic;
+}
+.form-footer input[type="button"] {
+  text-align: center;
+  border: none;
+  background: #232323;
+  margin-left: -5px;
+  outline: none;
+  border-radius: 12px;
+  padding: 2px 12px;
+}
+.social .fa {
+  color: grey;
+  font-size: 22px;
+  padding: 10px 15px;
+  background: #3c3c3c;
+}
+footer ul li {
+  list-style: none;
+  display: block;
+}
+footer ul {
+  padding-left: 0;
+}
+footer ul li a {
+  text-decoration: none;
+  color: grey;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: none;
+  color: #f5f5f5 !important;
+}
+footer .logo-part {
+  border-right: 1px solid grey;
+  height: 100%;
+}
 
 /*RESPONSIVE*/
 @media screen and (max-width: 1230px) {
-    
 }
 @media screen and (max-width: 1100px) {
-    
 }
 @media screen and (max-width: 900px) {
-    
 }
 @media screen and (max-width: 768px) {
-    body.disabled {       /*Ovo ce da bude aktivirano sa JS*/
-        overflow: hidden;
-    }
-    .icon {
-        display: block;
-    }
-    .icon.hide {
-        display: none;  /*Ovo ce da bude aktivirano sa JS*/
-    }
-    .navbar-container .menu-list {
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        left: -100%;
-        top: 0px;
-        display: block;
-        padding: 40px 0px;
-        text-align: center;
-        background-color:blueviolet;
-        transition: all 0.3s ease;
-    }
-    .navbar-container.show .menu-list {    /*Ovo ce da bude kasnije aktivirano*/
-        left: 0%;
-    }
-    .navbar-container .menu-list li {
-        margin-top: 45px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    .navbar-container .menu-list li a {
-        font-size: 23px;
-        padding: 30px 0px;
-        margin-left: -100%;
-        transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
-    .navbar-container.show .menu-list li a {
-        margin-left: 0px;
-    }
+  body.disabled {
+    /*Ovo ce da bude aktivirano sa JS*/
+    overflow: hidden;
+  }
+  .icon {
+    display: block;
+  }
+  .icon.hide {
+    display: none; /*Ovo ce da bude aktivirano sa JS*/
+  }
+  .navbar-container .menu-list {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0px;
+    text-align: center;
+    background-color: blueviolet;
+    transition: all 0.3s ease;
+  }
+  .navbar-container.show .menu-list {
+    /*Ovo ce da bude kasnije aktivirano*/
+    left: 0%;
+  }
+  .navbar-container .menu-list li {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .navbar-container .menu-list li a {
+    font-size: 23px;
+    padding: 30px 0px;
+    margin-left: -100%;
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar-container.show .menu-list li a {
+    margin-left: 0px;
+  }
 }
