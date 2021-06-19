@@ -30,7 +30,7 @@
   </head>
   <body>
     <!--NAVBAR-->
-    <nav class="navbar">
+    <nav class="navbar-container">
       <div class="content">
         <div class="logo">
           <a href="#">ComTrade</a>
@@ -63,16 +63,38 @@
       </div>
       <div class="login-signup-wrapper">
         <div class="prekrivac">
-            <p>Na ovom divu isto mozemo da napisemo nesto ako imate ideju</p>
+          <p>Na ovom divu isto mozemo da napisemo nesto ako imate ideju</p>
         </div>
         <div class="login-wrapper">
-          <input type="text" name="name" id="loginName" placeholder="Name" />
-          <input type="email" name="email" id="loginEmail" placeholder="Email" />
-          <input type="password" name="pass" id="loginPass" placeholder="Password" />
+          <div class="input-div"> 
+            <i id="nameFalse" class="fas fa-times-circle"></i>
+            <i id="nameTrue" class="fas fa-check-circle"></i>
+            <input type="text" name="name" id="loginName" placeholder="Name" />
+          </div>
+          <div class="input-div">
+            <i id="emailFalse" class="fas fa-times-circle"></i>
+            <i id="emailTrue" class="fas fa-check-circle"></i>
+            <input
+              type="email"
+              name="email"
+              id="loginEmail"
+              placeholder="Email"
+          />
+          </div>
+          <div class="input-div">
+            <i id="passFalse" class="fas fa-times-circle"></i>
+            <i id="passTrue" class="fas fa-check-circle"></i>
+            <input
+              type="password"
+              name="pass"
+              id="loginPass"
+              placeholder="Password"
+            />
+          </div>
           <div class="login-forgot-pass">
             <a href="#">Forgot password?</a>
           </div>
-          <div class="login-btn">Login</div>
+          <div class="login-btn" id="login-btn">Login</div>
           <div class="login-not-a-member">
             <p>
               Not a member? <span><a href="#">Signup</a></span>
@@ -80,83 +102,105 @@
           </div>
         </div>
         <div class="signup-wrapper">
-          <input type="text" name="name" id="signupName" placeholder="Name" />
-          <input type="email" name="email" id="signupEmail" placeholder="Email" />
-          <input type="password" name="pass" id="signupPass" placeholder="Password" />
-          <input
-            type="password"
-            name="pass"
-            id="pass"
-            placeholder="Confirm password"
-          />
-          <div class="login-btn">Signup</div>
+          <div class="input-div">
+            <i id="nameFalseSignup" class="fas fa-times-circle"></i>
+            <i id="nameTrueSignup" class="fas fa-check-circle"></i>
+            <input type="text" name="name" id="signupName" placeholder="Name" />
+          </div>
+          <div class="input-div">
+            <i id="emailFalseSignup" class="fas fa-times-circle"></i>
+            <i id="emailTrueSignup" class="fas fa-check-circle"></i>
+            <input
+              type="email"
+              name="email"
+              id="signupEmail"
+              placeholder="Email"
+            />
+          </div>
+          <div class="input-div">
+            <i id="passFalseSignup" class="fas fa-times-circle"></i>
+            <i id="passTrueSignup" class="fas fa-check-circle"></i>
+            <input
+              type="password"
+              name="pass"
+              id="signupPass"
+              placeholder="Password"
+            />
+          </div>
+          <div class="input-div">
+            <i id="passConfirmFalseSignup" class="fas fa-times-circle"></i>
+            <i id="passConfirmTrueSignup" class="fas fa-check-circle"></i>
+            <input
+              type="password"
+              name="pass"
+              id="signupConfirmPass"
+              placeholder="Confirm password"
+            />
+          </div>
+          <div class="signup-btn" id="signup-btn">Signup</div>
         </div>
       </div>
     </div>
 
     <!-- FOOTER -->
     <footer class="container-fluid bg-grey py-3 py-3 my-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="logo-part">
-                    <img src="./code logo.png" class="w-50 logo-footer" />
-                    <p>Savski nasip 7, 11070 Beograd | info@code.edu.rs</p>
-                    <p>Koristi se u edukacione svrhe</p>
-                  </div>
-                </div>
-                <div class="col-md-6 px-4">
-                  <h6>O testovima</h6>
-                  <p>Ovde da ispisemo nesto sto bi bilo interesantno</p>
-                  <a href="#" class="btn-footer"> Pocetak </a><br />
-                  <a href="#" class="btn-footer"> Contact Us</a>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="logo-part">
+                  <img src="./code logo.png" class="w-50 logo-footer" />
+                  <p>Savski nasip 7, 11070 Beograd | info@code.edu.rs</p>
+                  <p>Koristi se u edukacione svrhe</p>
                 </div>
               </div>
+              <div class="col-md-6 px-4">
+                <h6>O testovima</h6>
+                <p>Ovde da ispisemo nesto sto bi bilo interesantno</p>
+                <a href="#" class="btn-footer"> Pocetak </a><br />
+                <a href="#" class="btn-footer"> Contact Us</a>
+              </div>
             </div>
-            <div class="col-md-6">
-              <div class="row">
-                <div class="col-md-6 px-3">
-                  <h6>Najcesca pitanja</h6>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <ul>
-                        <li><a href="#"> Link test 1</a></li>
-                        <li><a href="#"> Link test 2</a></li>
-                        <li><a href="#"> Link test 3</a></li>
-                        <li><a href="#"> Link test 4</a></li>
-                        <li><a href="#"> Link test 5</a></li>
-                        <li><a href="#"> Link test 6</a></li>
-                      </ul>
-                    </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6 px-3">
+                <h6>Najcesca pitanja</h6>
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul>
+                      <li><a href="#"> Link test 1</a></li>
+                      <li><a href="#"> Link test 2</a></li>
+                      <li><a href="#"> Link test 3</a></li>
+                      <li><a href="#"> Link test 4</a></li>
+                      <li><a href="#"> Link test 5</a></li>
+                      <li><a href="#"> Link test 6</a></li>
+                    </ul>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <h6>Kontakt</h6>
-                  <div class="social">
-                    <a href="#"
-                      ><i class="fab fa-facebook fa-2x" aria-hidden="true"></i
-                    ></a>
-                    <a href="#"
-                      ><i class="fab fa-instagram fa-2x" aria-hidden="true"></i
-                    ></a>
-                  </div>
-                  <form class="form-footer my-3">
-                    <input
-                      type="text"
-                      placeholder="Pretraga...."
-                      name="search"
-                    />
-                    <input type="button" value="Go" />
-                  </form>
-                  <p>2021 Comtrade Code Academy. All Rights Reserved.</p>
+              </div>
+              <div class="col-md-6">
+                <h6>Kontakt</h6>
+                <div class="social">
+                  <a href="#"
+                    ><i class="fab fa-facebook fa-2x" aria-hidden="true"></i
+                  ></a>
+                  <a href="#"
+                    ><i class="fab fa-instagram fa-2x" aria-hidden="true"></i
+                  ></a>
                 </div>
+                <form class="form-footer my-3">
+                  <input type="text" placeholder="Pretraga...." name="search" />
+                  <input type="button" value="Go" />
+                </form>
+                <p>2021 Comtrade Code Academy. All Rights Reserved.</p>
               </div>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
 
     <script src="js.js"></script>
   </body>
