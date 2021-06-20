@@ -19,9 +19,9 @@
 }
 .navbar-container {
   position: fixed;
+  padding: 12px 0px;
   width: 100%;
   z-index: 20;
-  padding: 25px 0px;
   transition: all 0.3s ease;
   background-color: blueviolet;
   box-shadow: 0 1px 10px 5px rgba(0, 0, 0, 0.26);
@@ -29,7 +29,7 @@
 .navbar-container.sticky {
   /*Ova klasa ce da bude dodata naknadno preko JS*/
   background-color: #0b0b0c;
-  padding: 10px 0px;
+  padding: 5px 0px;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 10px 5px rgba(0, 0, 0, 0.26);
 }
@@ -78,12 +78,32 @@
 /* MAIN SECTION */
 /* visina nav-bara, da bi main krenuo ispod */
 .separator {
-  height: 95px;
+  height: 65px;
+}
+.welcome-btn {
+  position: absolute;
+  left: 200px;
+  top: 250px;
+  border: 2px solid blueviolet;
+  border-radius: 5px;
+  background-color: rgba(138, 43, 226, 0.1);
+}
+.welcome-btn:hover {
+  cursor: pointer;
+  background-color: transparent;
+}
+.welcome-btn-inner {
+  padding: 20px;
+}
+.welcome-btn-inner h1 {
+  font-size: 3em;
+}
+.welcome-btn-inner p {
+  font-size: 1.5em;
 }
 .section1 {
   background-color: var(--color-primary);
 }
-
 .img-left-wrapper {
   position: relative;
   width: max-content;
@@ -151,7 +171,6 @@
 .button-container-2 button {
   width: 101%;
   height: 100%;
-
   font-weight: 300;
   font-size: 1.3rem;
   letter-spacing: 1px;
@@ -230,11 +249,12 @@
 
 /* SECTION 2 */
 .section2 {
-  height: 800px;
   background: url(images/leone-venter-VieM9BdZKFo-unsplash.jpg);
-  background-repeat: no-repeat;
+  height: 100vh;
   background-size: cover;
+  background-attachment: fixed;
 }
+
 /*CONTACT FORM*/
 .razdvajac {
   height: 200px;
@@ -272,7 +292,7 @@
   display: flex;
 }
 .prekrivac {
-  z-index: 20;
+  z-index: 2;
   position: absolute;
   margin-left: 410px;
   display: flex;
@@ -341,6 +361,19 @@
 .fa-check-circle {
   color: green;
   display: none;
+}
+.uslovi-koriscenja-wrapper {
+  width: 90%;
+  display: flex;
+}
+.uslovi-koriscenja-wrapper p {
+  padding-top: 8px;
+}
+.uslovi-koriscenja-wrapper input[type=checkbox] {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  margin-right: 7px;
 }
 
 /*FOOTER*/

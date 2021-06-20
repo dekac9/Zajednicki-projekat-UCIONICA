@@ -106,18 +106,21 @@ document.getElementById("signup-btn").addEventListener("click", function() {
     //Input polja
     let name = document.getElementById("signupName");
     let email = document.getElementById("signupEmail");
+    let phone = document.getElementById("signupPhone"); 
     let pass = document.getElementById("signupPass");
     let passConfirm = document.getElementById("signupConfirmPass");
 
     //Regexi
     let nameRegex = /^[A-Z][a-z]{2,}/;
     let emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    let phoneRegex = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
     let passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
     let passConfirmRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
 
     //Primena metode "test"
     let nameTest = nameRegex.test(name.value);
     let emailTest = emailRegex.test(email.value);
+    let phoneTest = phoneRegex.test(phone.value);
     let passTest = passRegex.test(pass.value);
     let passConfirmTest = passConfirmRegex.test(passConfirm.value);
 
@@ -126,6 +129,8 @@ document.getElementById("signup-btn").addEventListener("click", function() {
     let nameFalse = document.getElementById("nameFalseSignup");
     let emailTrue = document.getElementById("emailTrueSignup");
     let emailFalse = document.getElementById("emailFalseSignup");
+    let phoneTrue = document.getElementById("phoneTrueSignup");
+    let phoneFalse = document.getElementById("phoneFalseSignup");
     let passTrue = document.getElementById("passTrueSignup");
     let passFalse = document.getElementById("passFalseSignup");
     let passConfirmTrue = document.getElementById("passConfirmTrueSignup");
@@ -150,6 +155,16 @@ document.getElementById("signup-btn").addEventListener("click", function() {
         emailFalse.style.display = "block";
         email.style.borderColor = "red";
         emailTrue.style.display = "none";
+    }
+
+    if(phoneTest) {
+        phoneTrue.style.display = "block";
+        phone.style.borderColor = "green";
+        phoneFalse.style.display = "none";
+    }else {
+        phoneFalse.style.display = "block";
+        phone.style.borderColor = "red";
+        phoneTrue.style.display = "none";
     }
 
     if(passTest) {
