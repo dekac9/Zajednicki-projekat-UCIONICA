@@ -29,18 +29,22 @@ window.addEventListener("scroll", function() {
 const loginBtn = document.getElementsByClassName("login-header-btn")[0];
 const signupBtn = document.getElementsByClassName("signup-header-btn")[0];
 const prekrivac = document.getElementsByClassName("prekrivac")[0];
+const leftArrow = document.getElementsByClassName("fa-arrow-alt-circle-left")[0];
+const rightArrow = document.getElementsByClassName("fa-arrow-alt-circle-right")[0];
 
 loginBtn.addEventListener("click", function() {
     prekrivac.style.marginLeft = "50%"
-    signupBtn.style.backgroundColor = "white";
-    signupBtn.style.color = "black";
-    loginBtn.style.backgroundColor = "blueviolet";
+    leftArrow.style.display = "block";
+    rightArrow.style.display = "none";
+    signupBtn.style.color = "lightgray";
+    loginBtn.style.color = "black";
 })
 signupBtn.addEventListener("click", function() {
     prekrivac.style.marginLeft = "0%";
-    loginBtn.style.backgroundColor = "white";
-    loginBtn.style.color = "black";
-    signupBtn.style.backgroundColor = "blueviolet";
+    leftArrow.style.display = "none";
+    rightArrow.style.display = "block";
+    signupBtn.style.color = "black";
+    loginBtn.style.color = "lightgray";
 })
 
 //CONTACT FORM REGEX

@@ -318,15 +318,24 @@
   font-size: 2em;
   padding: 15px 0px;
   font-weight: bold;
-  background-color: blueviolet;
+  border: 1px solid blueviolet;
+  display: flex;
+  justify-content: center;
 }
 .signup-header-btn {
   background-color: white;
+  color: lightgray;
 }
 .login-header-btn:hover,
 .signup-header-btn:hover {
-  color: black;
   cursor: pointer;
+}
+.fa-arrow-alt-circle-left {
+  margin-left: 15px;
+}
+.fa-arrow-alt-circle-right {
+  margin-right: 15px;
+  display: none;
 }
 .login-signup-wrapper {
   position: relative;
